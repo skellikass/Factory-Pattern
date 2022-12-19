@@ -2,9 +2,14 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Welcome!  Please select a clothing item from the following by typing your choice:");
+            Console.WriteLine("sweater, pants");
+            Console.WriteLine("(If an option above is not selected, you will receive the most expensive selection as default.)");
+            var clothingChoice = Console.ReadLine();
+            var printChoice = ClothingFactory.GetCLothing(clothingChoice);
+            printChoice.PrintDetails();
         }
     }
 }
